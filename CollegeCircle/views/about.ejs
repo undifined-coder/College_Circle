@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/home.css">
+  
+
+  <title>Home</title>
+  </head>
+  <body style='font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";'>
+    <nav class="navbar navbar-light navbar-expand-md shadow-sm fixed-top" style ="background-color: white;">
+      <div class="container-fluid">
+    <% if(!user) {  %>
+      <a class="navbar-brand" href="/" style="font-family: 'Chelsea Market', cursive;">College Circle</a>
+     <% } else { %>
+      <a class="navbar-brand" href="/" style="font-family: 'Chelsea Market', cursive;"> <%= user.firstName %> </a>
+     <% } %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse navbr" id="navbarSupportedContent" style="font-size: 14px;">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active px-2">
+            <a class="nav-link active" href="/">Home</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="/myblogs">Myblogs</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="/add">Addblogs</a>
+          </li>
+          <li class="nav-item  px-2">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <% if(!user) { %>
+          <li class="nav-item  px-2">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="/register">Signup</a>
+          </li>
+          <% } else { %>
+            <li class="nav-item  px-2">
+              <a class="nav-link" href="/logout">Logout</a>
+            </li>
+           <% } %> 
+        </ul>
+      </div>
+    </div> 
+    </nav>
+
+ <!-- <div class="head">
+    <div class="container">
+      <div class="hello">Hello! Welcome to</div>
+      <div class="row">
+      <div class="hd col-3"><span class="blog-hd">BLOG</span><span class="h">STERS</span></div>
+      <div class="col-6"></div>
+      <div class="col-3 bounce arrow">
+        <a href="#blg-id" style="color: #ECDD25;"><i class="fas fa-long-arrow-alt-down"></i></a>
+      </div>
+    </div>
+
+      <br>
+      <div class="row">
+      <div class="site-info col-6">Blogsters is a cool blogging website where you can read beautiful blogs of different categories like blogs on travel,food,lifestyles and many more.You can also create your own blog here.
+      </div>
+      </div>
+    </div>
+  </div> -->
+  
+  
+<p>
+  College Circle is a cool blogging website where you can read beautiful blogs of different categories like blogs on travel,food,lifestyles and many more.You can also create your own blog here.</p>
+
+    <!--<div id="mySidenav" class="sidenav">
+          <a href="#" id="home">Travel</a>
+          <a href="#" id="blog">Food</a>
+          <a href="#" id="projects">Politics</a>
+        <a href="#" id="about">Technical</a>
+        <a href="#" id="login">Health</a>
+        <a href="#" id="signup">Music</a>
+    </div> -->
+    
+    <div class="footer bg-dark text-white mt-5 px-4">
+      <div class="container" style="color:lightgrey; padding: 5% 5% 5% 5%;">
+        <div class="row">
+          <div class="col-4" style="margin-right: 5%;">
+              <h2 class="blg-footer" style="font-family: 'Chelsea Market', cursive; color:white;">College Circle</h2><br>
+              <p style='font-size:16px; font-weight: 500;'>College Circle is a cool blogging website where you can read beautiful blogs of different categories like blogs on travel,food,lifestyles and many more.You can also create your own blog here.</p>
+          </div>
+          <div class="col-3">
+            <h3 class="info"><ul class="list-group" style="list-style-type: none; color: white;">Information</ul></h3><br>
+            <h5><li><i class="fas fa-chevron-right"></i><span style="margin-left:10px;">Home</span></li></h5>
+            <h5><li><i class="fas fa-chevron-right"></i><span style="margin-left:10px;">Myblogs</span></li></h>
+            <h5><li><i class="fas fa-chevron-right"></i><span style="margin-left:10px;">Addblog</span></li></h5>
+            <h5><li><i class="fas fa-chevron-right"></i><span style="margin-left:10px;">About</span></li></h5>
+            <h5><li><i class="fas fa-chevron-right"></i><span style="margin-left:10px;">Login</span></li></h5>
+            <h5><li><i class="fas fa-chevron-right"></i><span style="margin-left:10px;">Signup</span></li></h5>
+          </div>
+          <div class="col-3">
+              <h3 class="contact" style="color: white;">Contact Us</h3><br>
+              <h6><li><i class="fas fa-map-marker-alt"></i><span style="margin-left: 10px;">New Delhi , India 110055</span></li></h6>
+            <h6><li><i class="fas fa-mobile-alt"></i><span style="margin-left: 10px;">01122233562</span></li></h6>
+            <h6><li><i class="fas fa-envelope"></i><span style="margin-left: 10px;">xyz@gmail.com</span></li></h6>
+          </div>
+        </div>
+        <div class="footer mt-5 px-4">
+      <p class = "lead text-center copyright">Copyright ©, College Circle, 2022</p>
+    </div>
+      </div>
+    </div>
+
+
+    <script type="text/javascript" src = "../javascripts/home.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+nav li{
+  padding: 0 10px;
+  margin: 0 5px;
+}
+
+nav{
+  box-shadow: 0 0 7px grey;
+}
+
+form{
+  border: solid 0.5px lightgrey;
+  padding: 40px 40px;
+  margin: 100px auto;
+  margin-bottom: 50px;
+  max-width: 760px;
+  border-radius: 5px;
+}
+
+input[type = "text"], input[type = "password"]{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border: solid 0.6px lightgrey;
+  padding: 0 7px;
+}
+
+input[type = "text"]:focus, input[type = "password"]:focus{
+  border: solid 2px #3498DB;
+}
+
+#names{
+  display: inline-flex;
+}
+
+#names #firstnameDiv{
+  margin-right: 20px;
+}
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label{
+  top: -59px;
+  left: 6px;
+  background: white;
+  font-size: 16px;
+  color: #2E86C1;
+  font-weight: 600;
+  padding: 0 3px;
+  opacity: 1;
+}
+
+.floating-label{
+  position: relative;
+  pointer-events: none;
+  left: 12px;
+  top: -36px;
+  color: grey;
+  transition: 0.2s ease all;
+}
+
+.inputInfo{
+  position: relative;
+  top: -25px;
+  font-size: 13px;
+  color: grey;
+}
+
+
+
+
+
+
+#mailingService{
+  position: relative;
+  float: right;
+  top: -36px;
+  right: 8px;
+}
+
+#nextButton{
+  padding: 6px 22px;
+}
+
+@media only screen and (max-width: 1000px){
+  nav ul{
+    text-align: center;
+  }
+  nav li{
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  form{
+    padding: 40px 5px;
+    border: none;
+    margin-top: 70px;
+  }
+
+ 
+}

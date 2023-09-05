@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/signup-style.css">
+  
+
+  <title>Home</title>
+  </head>
+  <body style='font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";'>
+    <nav class="navbar navbar-light navbar-expand-md shadow-sm fixed-top" style ="background-color: white;">
+      <div class="container-fluid">
+    <% if(!user) {  %>
+      <a class="navbar-brand" href="/" style="font-family: 'Chelsea Market', cursive;">Infix</a>
+     <% } else { %>
+      <a class="navbar-brand" href="/" style="font-family: 'Chelsea Market', cursive;"> <%= user.firstName %> </a>
+     <% } %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse navbr" id="navbarSupportedContent" style="font-size: 14px;">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active px-2">
+            <a class="nav-link active" href="/">Home</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="/myblogs">Myblogs</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="/add">Addblogs</a>
+          </li>
+          <li class="nav-item  px-2">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <% if(!user) { %>
+          <li class="nav-item  px-2">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li class="nav-item active px-2">
+            <a class="nav-link active" href="/register">Signup</a>
+          </li>
+          <% } else { %>
+            <li class="nav-item  px-2">
+              <a class="nav-link" href="/logout">Logout</a>
+            </li>
+           <% } %> 
+        </ul>
+      </div>
+    </div> 
+    </nav>
+
+    <div class="container">
+      <form id="signup-form" method="POST" onsubmit = "submitForm()">
+        <div class="row">
+          <div class="col-md-8">
+            <h4>Infix</h4>
+            <p style = "font-size: 30px;">Create your Infix Account</p>
+            <br>
+            <div class="alert-box mb-2" id="alert-box"></div>
+            <br>
+            <div id="names">
+              <div id="firstnameDiv">
+                <input type="text" id="firstName" name="firstName" class="rounded" required/>
+                <span class="floating-label">First name</span>
+              </div>
+              <div id="lastNameDiv">
+                <input type="text" name="lastName" id="lastName" class="rounded" required/>
+                <span class="floating-label">Last name</span>
+              </div>
+            </div>
+            <br>
+            <div id="emaildiv">
+              <input type="text" name="email" id="email" class="rounded" required/>
+              <span class="floating-label">Email</span>
+            </div>
+            <div id = "passwords">
+                <input type="password" name="password" id = "password" class="rounded" required/>
+                <span class="floating-label">Password</span>
+            </div>
+            <div>
+              <a href="/login" style = "text-decoration: none;">Sign in instead</a>
+              
+              <button class="btn btn-danger btn-block" id="submit" type="submit">Signup</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img src="/images/signup.svg" alt="signup image" height="100%" width="100%" id="signup-image">
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+    <script type="text/javascript" src="/javascripts/signup-script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  </body>
+</html>
